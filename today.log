@@ -1,0 +1,465 @@
+var a=10;
+undefined
+typeof a;
+"number"
+a="Hello";
+"Hello"
+typeof a;
+"string"
+a=true;
+true
+typeof a;
+"boolean"
+a=10/0;
+Infinity
+typeof a;
+"number"
+a=100-"ram"
+NaN
+typeof a;
+"number"
+a=90.20;
+90.2
+var e ;
+undefined
+typeof e;
+"undefined"
+var arr= [10,20,30,40,50];
+undefined
+typeof arr;
+"object"
+arr instanceof Array;
+true
+typeof Array;
+"function"
+var student = {id:1001,name:'Ram',phone:[121,333,444]};
+undefined
+typeof student;
+"object"
+student instanceof Array;
+false
+student instanceof Object;
+true
+student.id;
+1001
+student.name;
+"Ram"
+student.phone;
+(3) [121, 333, 444]
+student.phone[1];
+333
+var key = "id";
+undefined
+typeof key;
+"string"
+student[key]
+1001
+key="name";
+"name"
+student[key]
+"Ram"
+function show(){
+console.log("I am Show");
+}
+undefined
+typeof show;
+"function"
+show();
+VM2603:2 I am Show
+undefined
+var d= show();
+VM2603:2 I am Show
+undefined
+d;
+undefined
+show(100,20,90,1);
+VM2603:2 I am Show
+undefined
+function sum(a,b){
+return a + b;
+}
+undefined
+sum(10,20)
+30
+sum();
+NaN
+undefined + undefined;
+NaN
+10 + undefined
+NaN
+sum(10);
+NaN
+function sum(a=0,b=0){
+return a + b;
+}
+undefined
+sum();
+0
+function sum(a,b){
+a = a || 0;
+b = b || 0;
+return a + b;
+}
+undefined
+sum();
+0
+var a ;
+undefined
+var b ;
+undefined
+if(a==undefined){
+a=0;
+}
+if(b==undefined){
+b=0;
+}
+a + b;
+
+90.2
+a;
+90.2
+navigator.appCodeName;
+"Mozilla"
+navigator.appName;
+"Netscape"
+navigator.appVersion;
+"5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+typeof navigator;
+"object"
+function add(x,y){
+return x + y;
+}
+undefined
+var e = add;
+undefined
+var w = add(10,20);
+undefined
+w;
+30
+e;
+ƒ add(x,y){
+return x + y;
+}
+typeof e;
+"function"
+e();
+NaN
+e(90,100);
+190
+function add(x,y){
+return x() + y ();
+}
+undefined
+function firstNumber(){
+return 1000;
+}
+undefined
+function secondNumber(){
+return 2000;
+}
+undefined
+add(firstNumber, secondNumber);
+3000
+function loop(){
+console.log("I is ",i);
+for(var i = 1; i<=10;i++){
+	console.log(" Inside Loop i is ",i);
+}
+console.log("Outside Loop ",i);
+}
+undefined
+loop();
+VM7066:2 I is  undefined
+VM7066:4  Inside Loop i is  1
+VM7066:4  Inside Loop i is  2
+VM7066:4  Inside Loop i is  3
+VM7066:4  Inside Loop i is  4
+VM7066:4  Inside Loop i is  5
+VM7066:4  Inside Loop i is  6
+VM7066:4  Inside Loop i is  7
+VM7066:4  Inside Loop i is  8
+VM7066:4  Inside Loop i is  9
+VM7066:4  Inside Loop i is  10
+VM7066:6 Outside Loop  11
+undefined
+function loop(){
+console.log("I is ",i);
+for(let i = 1; i<=10;i++){
+	console.log(" Inside Loop i is ",i);
+}
+console.log("Outside Loop ",i);
+}
+undefined
+loop();
+VM7309:2 Uncaught ReferenceError: i is not defined
+    at loop (<anonymous>:2:21)
+    at <anonymous>:1:1
+loop @ VM7309:2
+(anonymous) @ VM7321:1
+function loop(){
+//console.log("I is ",i);
+for(let i = 1; i<=10;i++){
+	//console.log(" Inside Loop i is ",i);
+}
+//console.log("Outside Loop ",i);
+}
+undefined
+function evenOdd(num){
+return num%2==0?'Even No'+num:'Odd No '+num;
+}
+undefined
+function cube(x){
+	return x**3;
+}
+undefined
+function table(q){
+return 2 * q;
+}
+undefined
+function loop(choice){
+//console.log("I is ",i);
+for(let i = 1; i<=10;i++){
+if(choice ==1 ){
+console.log(evenOdd(i));
+}
+else
+if(choice==2){
+console.log(cube(i));
+}
+else
+if(choice==3){
+console.log(table(i));
+}
+	//console.log(" Inside Loop i is ",i);
+}
+//console.log("Outside Loop ",i);
+}
+undefined
+loop(1);
+VM7822:5 Odd No 1
+VM7822:5 Even No2
+VM7822:5 Odd No 3
+VM7822:5 Even No4
+VM7822:5 Odd No 5
+VM7822:5 Even No6
+VM7822:5 Odd No 7
+VM7822:5 Even No8
+VM7822:5 Odd No 9
+VM7822:5 Even No10
+undefined
+loop(2);
+VM7822:9 1
+VM7822:9 8
+VM7822:9 27
+VM7822:9 64
+VM7822:9 125
+VM7822:9 216
+VM7822:9 343
+VM7822:9 512
+VM7822:9 729
+VM7822:9 1000
+undefined
+loop(3)
+VM7822:13 2
+VM7822:13 4
+VM7822:13 6
+VM7822:13 8
+VM7822:13 10
+VM7822:13 12
+VM7822:13 14
+VM7822:13 16
+VM7822:13 18
+VM7822:13 20
+undefined
+function loop(fn){
+//console.log("I is ",i);
+for(let i = 1; i<=10;i++){
+fn(i);
+/*if(choice ==1 ){
+console.log(evenOdd(i));
+}
+else
+if(choice==2){
+console.log(cube(i));
+}
+else
+if(choice==3){
+console.log(table(i));
+}*/
+	//console.log(" Inside Loop i is ",i);
+}
+//console.log("Outside Loop ",i);
+}
+undefined
+loop(cube);
+undefined
+function loop(fn){
+//console.log("I is ",i);
+for(let i = 1; i<=10;i++){
+console.log(fn(i));
+/*if(choice ==1 ){
+console.log(evenOdd(i));
+}
+else
+if(choice==2){
+console.log(cube(i));
+}
+else
+if(choice==3){
+console.log(table(i));
+}*/
+	//console.log(" Inside Loop i is ",i);
+}
+//console.log("Outside Loop ",i);
+}
+undefined
+loop(cube);
+VM8166:4 1
+VM8166:4 8
+VM8166:4 27
+VM8166:4 64
+VM8166:4 125
+VM8166:4 216
+VM8166:4 343
+VM8166:4 512
+VM8166:4 729
+VM8166:4 1000
+undefined
+loop(evenOdd);
+VM8166:4 Odd No 1
+VM8166:4 Even No2
+VM8166:4 Odd No 3
+VM8166:4 Even No4
+VM8166:4 Odd No 5
+VM8166:4 Even No6
+VM8166:4 Odd No 7
+VM8166:4 Even No8
+VM8166:4 Odd No 9
+VM8166:4 Even No10
+undefined
+loop(table);
+VM8166:4 2
+VM8166:4 4
+VM8166:4 6
+VM8166:4 8
+VM8166:4 10
+VM8166:4 12
+VM8166:4 14
+VM8166:4 16
+VM8166:4 18
+VM8166:4 20
+undefined
+function outer(){
+console.log("Inside Outer");
+function inner(){
+console.log("Inside Inner");
+}
+return inner;
+}
+undefined
+var e = outer();
+VM8625:2 Inside Outer
+undefined
+e;
+ƒ inner(){
+console.log("Inside Inner");
+}
+typeof e;
+"function"
+inner();
+VM8703:1 Uncaught ReferenceError: inner is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM8703:1
+e();
+VM8625:4 Inside Inner
+undefined
+outer()();
+VM8625:2 Inside Outer
+VM8625:4 Inside Inner
+undefined
+function outer(){
+var x = 100;
+var inner = function(){
+console.log("Inside Inner ");
+}
+return inner;
+}
+undefined
+outer()();
+VM9248:4 Inside Inner 
+undefined
+var y = outer();
+undefined
+y;
+ƒ (){
+console.log("Inside Inner ");
+}
+function outer(){
+console.log("Inside Outer");
+function inner(){
+console.log("Inside Inner");
+}
+return inner;
+}
+undefined
+var t = outer();
+VM9421:2 Inside Outer
+undefined
+t;
+ƒ inner(){
+console.log("Inside Inner");
+}
+function outer(){
+var x = 100;
+var inner = function(){
+console.log("Inside Inner ");
+}
+return inner;
+}
+undefined
+var t = outer();
+undefined
+t;
+ƒ (){
+console.log("Inside Inner ");
+}
+t();
+VM9484:4 Inside Inner 
+undefined
+function outer(){
+var inner1 = function(){
+console.log("Inside Inner1 ");
+}
+var inner2 = function(){
+console.log("Inside Inner2 ");
+}
+return [inner1,inner2];
+}
+undefined
+var gg = outer();
+undefined
+gg;
+(2) [ƒ, ƒ]0: ƒ ()arguments: nullcaller: nulllength: 0name: "inner1"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM9732:2[[Scopes]]: Scopes[1]1: ƒ ()length: 2__proto__: Array(0)
+gg[0]()
+VM9732:3 Inside Inner1 
+undefined
+gg[1]();
+VM9732:6 Inside Inner2 
+undefined
+outer()[0]();
+VM9732:3 Inside Inner1 
+undefined
+function outer(){
+var inner1 = function Inner1(){
+console.log("Inside Inner1 ");
+}
+var inner2 = function Inner2(){
+console.log("Inside Inner2 ");
+}
+return [inner1,inner2];
+}
+undefined
+var t = outer();
+undefined
+t;
+(2) [ƒ, ƒ]0: ƒ Inner1()1: ƒ Inner2()length: 2__proto__: Array(0)

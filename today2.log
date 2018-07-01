@@ -1,0 +1,80 @@
+var a;
+var b;
+console.log("A is ",a,"B is ",b)
+if(a==undefined){
+a=0;
+}
+if(b==undefined){
+b=0;
+}
+a + b;
+VM3400:3 A is  undefined B is  undefined
+0
+var x;
+undefined
+x;
+undefined
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3710:5 Falsy  undefined
+undefined
+x=null;
+null
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3742:5 Falsy  null
+undefined
+x=0;
+0
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3759:5 Falsy  0
+undefined
+x="";
+""
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3793:5 Falsy  
+undefined
+x=NaN;
+NaN
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3809:5 Falsy  NaN
+undefined
+x=100;
+100
+if(x){
+console.log("Truthy ",x);
+}
+else{
+console.log("Falsy ",x);
+}
+VM3831:2 Truthy  100
+undefined
+x || 0
+100
+x=null;
+null
+x || 0
+0
