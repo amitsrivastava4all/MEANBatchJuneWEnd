@@ -1,0 +1,419 @@
+var a ;
+undefined
+typeof a;
+"undefined"
+a=100;
+100
+typeof a;
+"number"
+a="Hello";
+"Hello"
+typeof a;
+"string"
+var x = [10,20,30,40];
+undefined
+x++;
+NaN
+a++;
+NaN
+a=100;
+100
+a++;
+100
+a;
+101
+var object = {id:1001,name:'Ram'};
+undefined
+object.id;
+1001
+object = null;
+null
+typeof object;
+"object"
+var c;
+undefined
+typeof c;
+"undefined"
+var a= "100";
+undefined
+var b = 100;
+undefined
+typeof a;
+"string"
+typeof b;
+"number"
+a==b;
+true
+a===b;
+false
+function add(){
+console.log("Add is ");
+}
+undefined
+typeof add;
+"function"
+add();
+VM1137:2 Add is 
+undefined
+add(10,20,304,4);
+VM1137:2 Add is 
+undefined
+add([10,20,30],"Hello",true,90);
+VM1137:2 Add is 
+undefined
+function add(x,y){
+return  x  + y;
+}
+undefined
+add();
+NaN
+undefined + undefined;
+NaN
+undefined + 100;
+NaN
+"hello" + 100;
+"hello100"
+"Hello" + undefined;
+"Helloundefined"
+100 + true;
+101
+add(10);
+NaN
+function add(x,y){
+x = x || 0;
+y = y || 0;
+return  x  + y;
+}
+undefined
+var z ;
+undefined
+z?"truthy":"falsy";
+"falsy"
+z=100;
+100
+z?"truthy":"falsy";
+"truthy"
+z=null;
+null
+if(z){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1967:5 Falsy 
+undefined
+z= {};
+{}
+if(z){
+console.log("Truthy ");
+}
+else{
+console.log("Falsy ");
+}
+VM1987:2 Truthy 
+undefined
+z= null;
+null
+z?"truthy":"falsy";
+"falsy"
+z="";
+""
+z?"truthy":"falsy";
+"falsy"
+z=0;
+0
+z?"truthy":"falsy";
+"falsy"
+z=NaN;
+NaN
+z?"truthy":"falsy";
+"falsy"
+z=undefined;
+undefined
+z?"truthy":"falsy";
+"falsy"
+function add(x,y){
+x = x || 0;
+y = y || 0;
+return  x  + y;
+}
+undefined
+add();
+0
+add(10);
+10
+add(10,20);
+30
+function add(x=0,y=0){
+//x = x || 0;
+//y = y || 0;
+return  x  + y;
+}
+undefined
+add();
+0
+add(10);
+10
+add(10,20);
+30
+function loop(){
+for(let i = 1; i<=10; i++){
+
+}
+}
+undefined
+function evenOdd(num){
+return num%2==0?"Even Number"+num:"Odd Number "+num;
+}
+undefined
+function cube(num){
+	return num * num * num;
+}
+undefined
+function loop(ch){
+for(let i = 1; i<=10; i++){
+	if(ch==1){
+	console.log(evenOdd(i));    
+}
+else
+if(ch==2){
+console.log(cube(i));
+}
+}
+}
+undefined
+loop(1);
+VM3257:4 Odd Number 1
+VM3257:4 Even Number2
+VM3257:4 Odd Number 3
+VM3257:4 Even Number4
+VM3257:4 Odd Number 5
+VM3257:4 Even Number6
+VM3257:4 Odd Number 7
+VM3257:4 Even Number8
+VM3257:4 Odd Number 9
+VM3257:4 Even Number10
+undefined
+loop(2);
+VM3257:8 1
+VM3257:8 8
+VM3257:8 27
+VM3257:8 64
+VM3257:8 125
+VM3257:8 216
+VM3257:8 343
+VM3257:8 512
+VM3257:8 729
+VM3257:8 1000
+undefined
+function loop(fn){
+for(let i = 1; i<=10; i++){
+	console.log(fn(i));
+	
+}
+}
+undefined
+loop(evenOdd);
+VM3368:3 Odd Number 1
+VM3368:3 Even Number2
+VM3368:3 Odd Number 3
+VM3368:3 Even Number4
+VM3368:3 Odd Number 5
+VM3368:3 Even Number6
+VM3368:3 Odd Number 7
+VM3368:3 Even Number8
+VM3368:3 Odd Number 9
+VM3368:3 Even Number10
+undefined
+loop(cube);
+VM3368:3 1
+VM3368:3 8
+VM3368:3 27
+VM3368:3 64
+VM3368:3 125
+VM3368:3 216
+VM3368:3 343
+VM3368:3 512
+VM3368:3 729
+VM3368:3 1000
+undefined
+const PI = 3.14;
+undefined
+PI++;
+VM3622:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM3622:1
+cube;
+ƒ cube(num){
+	return num * num * num;
+}
+var z= cube(2);
+undefined
+z;
+8
+z = cube;
+ƒ cube(num){
+	return num * num * num;
+}
+z;
+ƒ cube(num){
+	return num * num * num;
+}
+typeof z;
+"function"
+z(3);
+27
+const doubleTheValue=(num)=>num*num;
+undefined
+typeof doubleTheValue;
+"function"
+doubleTheValue(2);
+4
+loop((num)=>num*num);
+VM3368:3 1
+VM3368:3 4
+VM3368:3 9
+VM3368:3 16
+VM3368:3 25
+VM3368:3 36
+VM3368:3 49
+VM3368:3 64
+VM3368:3 81
+VM3368:3 100
+undefined
+function loop(fn){
+for(let i = 1; i<=10; i++){
+	console.log(fn(i));
+	
+}
+}
+undefined
+function evenOdd(num){
+return num%2==0?"Even Number"+num:"Odd Number "+num;
+}
+undefined
+loop(evenOdd);
+VM4073:3 Odd Number 1
+VM4073:3 Even Number2
+VM4073:3 Odd Number 3
+VM4073:3 Even Number4
+VM4073:3 Odd Number 5
+VM4073:3 Even Number6
+VM4073:3 Odd Number 7
+VM4073:3 Even Number8
+VM4073:3 Odd Number 9
+VM4073:3 Even Number10
+undefined
+loop((num)=>num*num);
+VM4073:3 1
+VM4073:3 4
+VM4073:3 9
+VM4073:3 16
+VM4073:3 25
+VM4073:3 36
+VM4073:3 49
+VM4073:3 64
+VM4073:3 81
+VM4073:3 100
+undefined
+function cube(num){
+	return num * num * num;
+}
+undefined
+2**10
+1024
+loop((num)=>num*num);
+VM4073:3 1
+VM4073:3 4
+VM4073:3 9
+VM4073:3 16
+VM4073:3 25
+VM4073:3 36
+VM4073:3 49
+VM4073:3 64
+VM4073:3 81
+VM4073:3 100
+undefined
+const addition=(a,b)=>{
+console.log("A is "+a+" and B is "+b);
+return a +b;
+}
+undefined
+addition(100,200);
+VM4444:2 A is 100 and B is 200
+300
+const addition1=(a,b)=>{
+console.log(`A is ${a} and B is ${b}`);
+return a +b;
+}
+undefined
+addition1(100,200);
+VM4531:2 A is 100 and B is 200
+300
+var str = " mg,hdjkgdfhkgd \n ghjkghdkjhfg \n gjdkljgfkl";
+undefined
+str;
+" mg,hdjkgdfhkgd 
+ ghjkghdkjhfg 
+ gjdkljgfkl"
+str = `gdkjfgdhfkghjkghjkdhgjdfjk
+gdjkfghdfk
+gdfjkghdfjk
+gdfkjghkd
+`;
+"gdkjfgdhfkghjkghjkdhgjdfjk
+gdjkfghdfk
+gdfjkghdfjk
+gdfkjghkd
+"
+function calc(){
+console.log("Calc call ");
+function add(){
+	console.log("Add ");
+}
+return add;
+}
+undefined
+var x = calc();
+VM6003:2 Calc call 
+undefined
+typeof x;
+"function"
+x;
+ƒ add(){
+	console.log("Add ");
+}
+x();
+VM6003:4 Add 
+undefined
+calc()();
+VM6003:2 Calc call 
+VM6003:4 Add 
+undefined
+function calc(){
+var d = 100;
+const add=()=>console.log("Arrow Add ");
+const sub2=function(){
+console.log("Function Expression Sub Call ");
+}
+return [add , sub2];
+}
+
+undefined
+calc()[0]();
+VM6514:3 Arrow Add 
+undefined
+calc()[1]();
+VM6514:5 Function Expression Sub Call 
+undefined
+function test(){
+a2 = 1000;
+console.log("A is ",a2);
+}
+undefined
+test();
+VM6653:3 A is  1000
+undefined
+a2;
+1000
