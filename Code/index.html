@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="design.css">
+    <title>Document</title>
+    <script>
+        // JS Code Starts
+        function titleCase(str) {
+            return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+        }
+
+        function sayWelcome() {
+            var firstName = document.querySelector("#firstname").value;
+            var lastName = document.querySelector("#lastname").value;
+            var fullName = titleCase(firstName) + " " + titleCase(lastName);
+            var message = "Welcome " + fullName;
+            document.querySelector("#result").innerText = message;
+            //console.log("Welcome Call");
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Greet App</h2>
+    <table>
+        <tr>
+            <td><label for="">First Name</label></td>
+            <td><input id="firstname" class="mystyle" type="text" placeholder="Type FirstName"></td>
+        </tr>
+        <tr>
+            <td><label for="">Last Name</label></td>
+            <td><input id="lastname" type="text" class="mystyle" placeholder="Type LastName"></td>
+        </tr>
+        <tr>
+            <td><button onclick="sayWelcome()">Greet</button></td>
+            <td><button>Clear</button></td>
+        </tr>
+    </table>
+    <div id="result"></div>
+</body>
+
+</html>
