@@ -1,0 +1,36 @@
+document.querySelectorAll(".mystyle");
+document.querySelectorAll(".mystyle")[1];
+document.querySelectorAll(".mystyle")[1].value="Kumar";
+var fullName = "rAM kUMaR";
+var names = fullName.split(" ");
+names[0].charAt(0);
+var x= names[0];
+x.charAt(0).toUpperCase()+x.substring(1).toLowerCase();
+typeof localStorage;
+"object"
+window.localStorage;
+Storage {HPLWShownSessionsCount: "2", beaconTtl: "1531549422361", browsed-products: "["APFESDCCZPDQQGYU","SMWEZTSUJAUFWHBH","MIXEWEBFRHTRSDXR"]", groceryNavigationMenuData: "false", navigationMenuData: ""{\"navigationMenuData\":{\"enableNavCache\":false…\":200},\"navigationMenuDataTTL\":1531550022348}"", …}
+localStorage.clear();
+undefined
+localStorage;
+Storage {length: 0}
+navigator.cookieEnabled;
+true
+navigator.javaEnabled;
+ƒ javaEnabled() { [native code] }
+navigator.javaEnabled();
+false
+navigator.language
+"en-GB"
+screen.height;
+768
+screen.width;
+1024
+var d = window.open("http://www.google.com");
+d.close();
+var spans = window.document.querySelectorAll("span");
+for(let span of spans){
+span.innerText="HACK !";
+}
+var images = document.querySelectorAll("img");
+var images = document.querySelectorAll("img");
