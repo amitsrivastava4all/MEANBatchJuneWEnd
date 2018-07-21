@@ -1,0 +1,171 @@
+function hra(){
+console.log("I am Hra Function ");
+}
+undefined
+window.hra();
+VM68:2 I am Hra Function 
+undefined
+hra();
+VM68:2 I am Hra Function 
+undefined
+hra() ;  // window.hra()
+VM68:2 I am Hra Function 
+undefined
+x = 100;
+100
+window.x;
+100
+x;
+100
+var object = {
+hra(){
+console.log("My HRA ");
+}
+}
+undefined
+hra();
+VM68:2 I am Hra Function 
+undefined
+window.hra();
+VM68:2 I am Hra Function 
+undefined
+object.hra();
+VM268:3 My HRA 
+undefined
+var object = {
+hra:function(){
+console.log("ES5 and Before ");
+}
+}
+undefined
+var object2 = {
+hra(){
+console.log("My HRA ");
+}
+}
+undefined
+const salaryOperations = {
+    basicSalary:0,
+    /*takeSalary:function(){
+
+    }*/
+    takeSalary(salary){
+        this.basicSalary = salary;
+    },
+    hra(){
+        return this.basicSalary * 0.30;
+    },
+    da(){
+        return this.basicSalary * 0.20;
+    },
+    ta(){
+        return this.basicSalary * 0.10;
+    },
+    pf(){
+        return this.basicSalary * 0.05;
+    },
+    gs(){
+        return this.basicSalary + this.hra() + this.da() + this.ta() - this.pf();
+    },
+    tax(){
+        return this.gs() * 0.10;
+    },
+    ns(){
+        return this.gs() - this.tax();
+    }
+
+}
+undefined
+salaryOperations;
+{basicSalary: 0, takeSalary: ƒ, hra: ƒ, da: ƒ, ta: ƒ, …}
+salaryOperations.hra();
+0
+salaryOperations.takeSalary(9999);
+undefined
+salaryOperations.hra();
+2999.7
+salaryOperations.ffgdhf;
+undefined
+var dynamic = "hra";
+undefined
+salaryOperations.dynamic;
+undefined
+salaryOperations[dynamic]
+ƒ hra(){
+        return this.basicSalary * 0.30;
+    }
+salaryOperations[dynamic]();
+2999.7
+"#"+dynamic
+"#hra"
+for(let key in salaryOperations){
+console.log(key);
+}
+VM1856:2 basicSalary
+VM1856:2 takeSalary
+VM1856:2 hra
+VM1856:2 da
+VM1856:2 ta
+VM1856:2 pf
+VM1856:2 gs
+VM1856:2 tax
+VM1856:2 ns
+undefined
+for(let i in salaryOperations){
+console.log(i);
+}
+VM1996:2 basicSalary
+VM1996:2 takeSalary
+VM1996:2 hra
+VM1996:2 da
+VM1996:2 ta
+VM1996:2 pf
+VM1996:2 gs
+VM1996:2 tax
+VM1996:2 ns
+undefined
+for(let key in salaryOperations){
+console.log(key + " " + salaryOperations[key]);
+}
+VM2476:2 basicSalary 9999
+VM2476:2 takeSalary takeSalary(salary){
+        this.basicSalary = salary;
+    }
+VM2476:2 hra hra(){
+        return this.basicSalary * 0.30;
+    }
+VM2476:2 da da(){
+        return this.basicSalary * 0.20;
+    }
+VM2476:2 ta ta(){
+        return this.basicSalary * 0.10;
+    }
+VM2476:2 pf pf(){
+        return this.basicSalary * 0.05;
+    }
+VM2476:2 gs gs(){
+        return this.basicSalary + this.hra() + this.da() + this.ta() - this.pf();
+    }
+VM2476:2 tax tax(){
+        return this.gs() * 0.10;
+    }
+VM2476:2 ns ns(){
+        return this.gs() - this.tax();
+    }
+undefined
+function test(){
+console.log("Test Call ");
+}
+undefined
+typeof test;
+"function"
+var gg = 100;
+undefined
+typeof gg;
+"number"
+var name = "Amit Srivastava";
+undefined
+name.split(" ");
+(2) ["Amit", "Srivastava"]
+typeof name;
+"string"
