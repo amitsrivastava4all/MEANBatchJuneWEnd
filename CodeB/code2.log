@@ -1,0 +1,57 @@
+var arr = [10,20,30,40,50];
+undefined
+for(let i = 0 ;i<arr.length; i++){
+console.log(arr[i]);
+}
+VM50271:2 10
+VM50271:2 20
+VM50271:2 30
+VM50271:2 40
+VM50271:2 50
+undefined
+function printIt(currentElement){
+	console.log("Current Element is ",currentElement);
+}
+arr.forEach(printIt);
+VM50655:2 Current Element is  10
+VM50655:2 Current Element is  20
+VM50655:2 Current Element is  30
+VM50655:2 Current Element is  40
+VM50655:2 Current Element is  50
+undefined
+function forEach(fn){
+for(let i = 0 ; i<arr.length; i++){
+fn(i);
+}
+}
+undefined
+function forEach(fn){
+for(let i = 0 ; i<arr.length; i++){
+fn(arr[i]);
+}
+}
+undefined
+forEach(printIt);
+VM50655:2 Current Element is  10
+VM50655:2 Current Element is  20
+VM50655:2 Current Element is  30
+VM50655:2 Current Element is  40
+VM50655:2 Current Element is  50
+undefined
+arr.forEach(printIt);
+VM50655:2 Current Element is  10
+VM50655:2 Current Element is  20
+VM50655:2 Current Element is  30
+VM50655:2 Current Element is  40
+VM50655:2 Current Element is  50
+undefined
+window.forEach
+ƒ forEach(fn){
+for(let i = 0 ; i<arr.length; i++){
+fn(arr[i]);
+}
+}
+arr.forEach
+ƒ forEach() { [native code] }
+typeof arr;
+"object"

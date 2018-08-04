@@ -1,0 +1,190 @@
+var counter = 0;
+function increment(){
+counter++;
+}
+undefined
+increment();
+undefined
+var counter = 0;
+function increment(){
+return counter++;
+}
+undefined
+increment();
+0
+increment();
+1
+increment();
+2
+increment();
+3
+var counter="Hello";
+undefined
+increment();
+NaN
+var object = {
+counter : 0,
+increment(){
+return counter++;
+}
+}
+undefined
+var object = {
+counter : 0,
+increment(){
+return this.counter++;
+}
+}
+undefined
+object.increment();
+0
+object.increment();
+1
+object.increment();
+2
+object.increment();
+3
+counter;
+NaN
+object.increment();
+4
+const mathOperations = {
+counter:0,
+plus(){
+return this.counter++;
+},
+minus(){
+return this.counter--;
+
+}
+VM57207:9 Uncaught SyntaxError: Unexpected end of input
+const mathOperations = {
+counter:0,
+plus(){
+return this.counter++;
+},
+minus(){
+return this.counter--;
+}
+}
+undefined
+var mathOperations = '+';
+VM57362:1 Uncaught SyntaxError: Identifier 'mathOperations' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM57362:1
+const mathOperations = '+';
+VM57413:1 Uncaught SyntaxError: Identifier 'mathOperations' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM57413:1
+const MIN_STOCK = 10;
+undefined
+MIN_STOCK++;
+VM57509:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:10
+(anonymous) @ VM57509:1
+mathOperations.counter;
+0
+mathOperations.plus();
+0
+mathOperations.plus();
+1
+mathOperations.plus();
+2
+mathOperations.plus();
+3
+mathOperations.plus();
+4
+mathOperations.counter;
+5
+mathOperations.counter = 100;
+100
+mathOperations.plus();
+100
+mathOperations.plus();
+101
+mathOperations.plus();
+102
+const incre = (function(a){
+var counter = 0;
+return function(x,y){
+a+x+y+counter++;
+}
+})(100); 
+undefined
+incre;
+ƒ (x,y){
+a+x+y+counter++;
+}
+typeof incre;
+"function"
+incre(10,20);
+undefined
+const incre = (function(a){
+var counter = 0;
+return function(x,y){
+return a+x+y+(++counter);
+}
+})(100); 
+VM61859:1 Uncaught SyntaxError: Identifier 'incre' has already been declared
+    at <anonymous>:1:1
+(anonymous) @ VM61859:1
+const increA = (function(a){
+var counter = 0;
+return function(x,y){
+return a+x+y+(++counter);
+}
+})(100); 
+undefined
+increA(1,2)
+104
+var object = {
+arr : [10,21,25,27,20,18],
+arr2:[]
+copyEvenNumbers(){
+this.arr.forEach(function(currentElement){
+if(currentElement%2==0){
+this.arr2.push(currentElement);
+}
+});
+return this.arr2;
+}
+}
+VM64398:4 Uncaught SyntaxError: Unexpected identifier
+var object = {
+arr : [10,21,25,27,20,18],
+arr2:[],
+copyEvenNumbers(){
+this.arr.forEach(function(currentElement){
+if(currentElement%2==0){
+this.arr2.push(currentElement);
+}
+});
+return this.arr2;
+}
+}
+undefined
+object.copyEvenNumbers();
+VM64575:7 Uncaught TypeError: Cannot read property 'push' of undefined
+    at <anonymous>:7:11
+    at Array.forEach (<anonymous>)
+    at Object.copyEvenNumbers (<anonymous>:5:10)
+    at <anonymous>:1:8
+(anonymous) @ VM64575:7
+copyEvenNumbers @ VM64575:5
+(anonymous) @ VM66282:1
+var object = {
+arr : [10,21,25,27,20,18],
+arr2:[],
+copyEvenNumbers(){
+var that = this;
+this.arr.forEach(function(currentElement){
+if(currentElement%2==0){
+that.arr2.push(currentElement);
+}
+});
+return this.arr2;
+}
+}
+undefined
+object.copyEvenNumbers();
+(3) [10, 20, 18]
