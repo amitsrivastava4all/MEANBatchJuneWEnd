@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", () => {
+            var button = document.querySelector("#call");
+            document.querySelector("#call").addEventListener("click", add);
+            document.querySelector("#setbt").addEventListener("click", setValue);
+            var buttons = document.querySelectorAll(".btn");
+            buttons.forEach(currentButton => {
+                currentButton.addEventListener("click", giveMeValue);
+            })
+            var oprbuttons = document.querySelectorAll(".opr");
+            oprbuttons.forEach(currentButton => {
+                currentButton.addEventListener("click", operation);
+            })
+            document.querySelector("#equal").addEventListener("click", compute);
+            document.querySelector("#back").addEventListener("click", back);
+        })
+
+        function back() {
+            var str = document.querySelector("#result").innerText;
+
+            str = str.substring(0, str.length - 1);
+            document.querySelector("#result").innerText = str;
+        }
+
+        function compute() {
+            document.querySelector("#result").innerText = eval(document.querySelector("#result").innerText);
+        }
+
+        function operation() {
+            var operator = this.innerHTML;
+            document.querySelector("#result").innerText += operator;
+        }
+
+        function giveMeValue() {
+            document.querySelector("#result").innerText += this.innerHTML;
+        }
+
+        function setValue() {
+            document.querySelector("#call").setAttribute("data-param", 90);
+            document.querySelector("#call").setAttribute("data-param2", 190);
+            console.log("done....");
+
+        }
+
+        function add() {
+            var x = this.getAttribute("data-param");
+            var y = this.getAttribute("data-param2");
+            console.log("X is " + x + " and Y is " + y);
+            return x + y;
+        }
+    </script>
+</head>
+
+<body>
+    <p id="result"></p>
+    <hr>
+    <button id="back">Back</button>
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">7</button>
+    <button class="btn">8</button>
+    <button class="btn">9</button>
+    <hr>
+    <button class="opr">+</button>
+    <button class="opr">-</button>
+    <button class="opr">*</button>
+    <button class="opr">/</button>
+    <button id="equal">=</button>
+    <button data-param="10" data-param2="20" id="call">Call Me</button>
+    <button id="setbt">Set</button>
+</body>
+
+</html>

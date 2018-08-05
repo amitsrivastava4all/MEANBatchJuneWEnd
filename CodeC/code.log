@@ -1,0 +1,109 @@
+function whoAmI(){
+console.log(`Name is ${this.name} Id is ${this.id} Phone is ${this.phone} Address is ${this.address}`);
+}
+undefined
+var student = {id:1001,name:'Ram',phone:9999,address:'Delhi'};
+undefined
+var customer = {balance:99999, id:1002,name:'Shyam',phone:2222,address:'Delhi'};
+undefined
+var emp =  {salary:77777id:1003,name:'Ramesh',phone:5555,address:'Delhi'};
+VM225:1 Uncaught SyntaxError: Invalid or unexpected token
+var emp =  {salary:77777,id:1003,name:'Ramesh',phone:5555,address:'Delhi'};
+undefined
+var name = 'Anil';
+undefined
+window.name;
+"Anil"
+var phone =81111;
+undefined
+window.phone;
+81111
+whoAmI();
+VM130:2 Name is Anil Id is undefined Phone is 81111 Address is undefined
+undefined
+window.whoAmI();
+VM130:2 Name is Anil Id is undefined Phone is 81111 Address is undefined
+undefined
+student.whoAmI();
+VM397:1 Uncaught TypeError: student.whoAmI is not a function
+    at <anonymous>:1:9
+(anonymous) @ VM397:1
+whoAmI.apply(student);
+VM130:2 Name is Ram Id is 1001 Phone is 9999 Address is Delhi
+undefined
+whoAmI.apply(customer);
+VM130:2 Name is Shyam Id is 1002 Phone is 2222 Address is Delhi
+undefined
+whoAmI(customer);
+VM130:2 Name is Anil Id is undefined Phone is 81111 Address is undefined
+undefined
+window.whoAmI(customer);
+VM130:2 Name is Anil Id is undefined Phone is 81111 Address is undefined
+undefined
+whoAmI.apply(customer);  // customer.whoAmI();
+VM130:2 Name is Shyam Id is 1002 Phone is 2222 Address is Delhi
+undefined
+whoAmI.call(customer);
+VM130:2 Name is Shyam Id is 1002 Phone is 2222 Address is Delhi
+undefined
+function whoAmI(argName, argValue){
+console.log(`Name is ${this.name} Id is ${this.id} Phone is ${this.phone} Address is ${this.address} ${argName} is ${argValue}`);
+}
+undefined
+whoAmI.apply(customer,['Balance ',customer.balance]);
+VM849:2 Name is Shyam Id is 1002 Phone is 2222 Address is Delhi Balance  is 99999
+undefined
+whoAmI.apply(emp,['Salary ',emp.salary]);
+VM849:2 Name is Ramesh Id is 1003 Phone is 5555 Address is Delhi Salary  is 77777
+undefined
+whoAmI.call(emp,'Salary',emp.salary);
+VM849:2 Name is Ramesh Id is 1003 Phone is 5555 Address is Delhi Salary is 77777
+undefined
+var fn = whoAmI.bind(emp);
+undefined
+fn('Salary',88888);
+VM849:2 Name is Ramesh Id is 1003 Phone is 5555 Address is Delhi Salary is 88888
+undefined
+whoAmI.apply(student);
+VM849:2 Name is Ram Id is 1001 Phone is 9999 Address is Delhi undefined is undefined
+undefined
+function whoAmI(argName, argValue){
+if(argName && argValue){
+console.log(`Name is ${this.name} Id is ${this.id} Phone is ${this.phone} Address is ${this.address} ${argName} is ${argValue}`);
+}
+else{
+console.log(`Name is ${this.name} Id is ${this.id} Phone is ${this.phone} Address is ${this.address} `);
+}
+
+}
+undefined
+whoAmI.apply(student);
+VM1582:6 Name is Ram Id is 1001 Phone is 9999 Address is Delhi 
+undefined
+whoAmI.apply(customer,'Balance',customer.balance);
+VM1653:1 Uncaught TypeError: CreateListFromArrayLike called on non-object
+    at <anonymous>:1:8
+(anonymous) @ VM1653:1
+whoAmI.apply(customer,['Balance',customer.balance]);
+VM1582:3 Name is Shyam Id is 1002 Phone is 2222 Address is Delhi Balance is 99999
+undefined
+"Amit".substring(0);
+"Amit"
+"Amit".substring(0,4);
+"Amit"
+"Amit".substring(0,3);
+"Ami"
+"Amit".substring(0,2);
+"Am"
+"Amit".substring(0,1);
+"A"
+"Amit".substring(0,"Amit".length);
+"Amit"
+"Amit".substring(0,"Amit".length-1);
+"Ami"
+var x = [10,20,30,40];
+undefined
+x.filter(currentElement => currentElement == 30);
+[30]
+x.filter(currentElement => currentElement == 3000);
+[]
