@@ -1,0 +1,52 @@
+var name = "amit";
+undefined
+name.charAt(0).toUpperCase();
+"A"
+function* randomNumbers(){
+yield "AA1199";
+yield "BA1188";
+yield "DD1299";
+yield "ZZ1111";
+yield "DD1129";
+}
+undefined
+var otp = randomNumbers();
+undefined
+otp.next().value;
+"AA1199"
+otp.next().value;
+"BA1188"
+otp.next().value;
+"DD1299"
+otp.next().value;
+"ZZ1111"
+otp.next().value;
+"DD1129"
+otp.next().value;
+undefined
+function* sequence(){
+var counter = 1;
+while(true){
+yield counter;
+counter++;
+}
+}
+undefined
+var c = sequence();
+undefined
+c.next().value;
+1
+c.next().value;
+2
+c.next().value;
+3
+c.next().value;
+4
+c.next().value;
+5
+c.next().value;
+6
+c.next().value;
+7
+c;
+sequence {<suspended>}

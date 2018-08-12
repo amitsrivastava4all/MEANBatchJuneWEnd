@@ -1,0 +1,11 @@
+#questions {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+#questions>thead>tr>td {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}

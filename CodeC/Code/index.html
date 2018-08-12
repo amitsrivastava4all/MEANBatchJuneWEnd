@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/utils.js"></script>
+    <script src="js/question.js"></script>
+    <script src="js/questionoperations.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <h2>CRUD App Demo</h2>
+    <table>
+        <tr>
+            <td><label for="">Id</label></td>
+            <td><label for="" id="qid"></label></td>
+        </tr>
+        <tr>
+            <td><label for="">Name</label></td>
+            <td><textarea id="name" rows="10" cols="30" placeholder="Type Question Here"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="">OptionA</label></td>
+            <td><input type="text" id="ans1" placeholder="Type OptionA"></td>
+        </tr>
+        <tr>
+            <td><label for="">OptionB</label></td>
+            <td><input type="text" id="ans2" placeholder="Type OptionB"></td>
+        </tr>
+        <tr>
+            <td><label for="">OptionC</label></td>
+            <td><input type="text" id="ans3" placeholder="Type OptionC"></td>
+        </tr>
+        <tr>
+            <td><label for="">OptionD</label></td>
+            <td><input type="text" id="ans4" placeholder="Type OptionD"></td>
+        </tr>
+        <tr>
+            <td><label for="">Right Answer</label></td>
+            <td><select id="rans">
+                <option >Select Ans</option>
+                    <option >a</option>
+                    <option >b</option>
+                    <option >c</option>
+                    <option >d</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td><label for="">Score</label></td>
+            <td><input id="score" min="1" max="10" type="range"></td>
+        </tr>
+        <tr>
+            <td><label for="">Date</label></td>
+            <td><input id="date" type="date"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td><button id="add">Add</button></td>
+                        <td><button>Delete</button></td>
+                        <td><button>Search</button></td>
+                        <td><button>Update</button></td>
+                        <td><button>Save</button></td>
+                        <td><button>Load</button></td>
+                        <td><button>Sort</button></td>
+                        <td><button>Load From Server</button></td>
+                        <td><button>Clear All</button></td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+    </table>
+    <h3>Total Records are <span id="total"></span> Mark Records are <span id="mark"></span> UnMark Records are <span id="unmark"></span></h3>
+    <fieldset>
+        <legend>Questions</legend>
+        <table id="questions">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Ans1</td>
+                    <td>Ans2</td>
+                    <td>Ans3</td>
+                    <td>Ans4</td>
+                    <td>Rans</td>
+                    <td>Score</td>
+                    <td>Date</td>
+                    <td>Operations</td>
+                </tr>
+            </thead>
+            <tbody id="questionlist">
+                <!--Dynamic Table-->
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+
+</html>
